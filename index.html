@@ -1,0 +1,93 @@
+<html>
+	
+<head>
+<title>NitroGen</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<style>
+@media (max-width: 500px) {
+
+*{
+	text-align: center;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+textarea {
+  height: 100px;
+  line-height:1.25;
+}
+button {
+	background-color:#00ff22;
+	cursor:pointer;
+	color:#ff000d;
+	font-family:Arial;
+	font-size:50px;
+	padding:50px 60px;
+	text-decoration:none;
+}
+}
+
+.button0 {
+  font-size:20px;
+  padding:50px 60px;
+}
+</style>
+</head>
+<body>
+<style>
+  textarea {
+    background-color: #00ff22;
+    border: 1px solid #00ff22;
+    color: #ff000d;
+    padding: 8px;
+    font-family: courier new;
+}
+
+body {
+    background-color: #00ff22;
+}
+
+input {
+    background-color: #00ff22;
+    color: #ff000d;
+}
+
+button {
+	background-color:#00ff22;
+	cursor:pointer;
+	color:#ff000d;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 8px;
+	text-decoration:none;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+<div>
+<h1 style="font-family: Roboto; color: #ff000d">DISCORD NITRO GENERATOR</h1>
+<textarea id="a" rows="11" cols="100" readonly style="resize: none;"></textarea>
+<p></p>
+<p style="font-family: Arial; color: #ff000d">How many codes do you want to generate per second? (5 is default)</p>
+<input type="text" id="speed" value="5">
+<p></p>
+<button id='generate' class="button">
+  Start Generating!
+</button>
+<p></p>
+<button id='stop' class="button">
+  Stop Generating!
+</button>
+    <p></p>
+<button id='save' onclick="var rows = document.getElementById('b').value.split('\n').length -  1; download(rows + ' Unchecked Fortnites Codes.txt', 'Dumped by yanir\n\n' + document.getElementById('b').value + '\n)')" class="button">Make Log Dump</button>
+    <p></p>
+<button onclick="stop(); document.getElementById('a').value = '';" class="button" id="clear">Clear Log</button>
+<textarea style="display: none;" id="b" rows="11" cols="100" readonly>
+</textarea>
+	<script src="main.js"></script>
+</div>
+	</body>
+</html>
